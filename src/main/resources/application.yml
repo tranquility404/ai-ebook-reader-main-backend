@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:local}
+  servlet:
+    multipart:
+      max-file-size: 16MB
+      max-request-size: 20MB
+
+server:
+  port: ${PORT:8080}
+
+gplaybook:
+  apikey:
+    ${GPLAYBOOKS_APIKEY}
+
+cors:
+  allowed-methods: GET,POST,PUT,DELETE,OPTIONS
+  allowed-headers: "*"
+  allow-credentials: true

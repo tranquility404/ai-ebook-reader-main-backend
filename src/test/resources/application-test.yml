@@ -1,0 +1,16 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/pgmanagement
+
+server:
+  port: 8080
+
+cors:
+  allowed-origins: http://localhost:3000
+
+logging:
+  level:
+    root: INFO
+    com.pgmanagement: DEBUG
+
