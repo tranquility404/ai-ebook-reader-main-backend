@@ -8,7 +8,7 @@
 		<version>3.3.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com</groupId>
+	<groupId>com.tranquility.ebookreader</groupId>
 	<artifactId>EbookReader-Backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ebookreader</name>
