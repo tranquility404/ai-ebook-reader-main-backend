@@ -5,11 +5,11 @@ RUN apt-get update && apt-get install -y maven
 WORKDIR /app
 
 # Copy the pom.xml and other necessary files to download dependencies first
-COPY pom.xml .
 COPY lib/ lib/
+COPY pom.xml .
 
 # Download the dependencies before copying the rest of the source files
-RUN mvn dependency:go-offline -B
+RUN mvn clean package -DskipTests
 
 # Now copy the source code
 COPY src ./src
@@ -30,4 +30,4 @@ COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
 
 # Run the Spring Boot application
-ENTRYPOINT ["java", "-jar", "/app/app.jar", "--spring.profiles.active=prod"]
+ENTRYPOINT ["java", "-jar", "/app/app.jar", "--spring.profiles.active=production"]
