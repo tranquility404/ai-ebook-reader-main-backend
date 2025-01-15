@@ -2,7 +2,8 @@ secrets/
 books/
 .env
 
-target/
+target/*
+!target/*.jar
 .mvn/
 src/test
 
