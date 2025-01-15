@@ -30,18 +30,6 @@
 		<java.version>17</java.version>
 	</properties>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>com.google.cloud</groupId>
-				<artifactId>libraries-bom</artifactId>
-				<version>26.52.0</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
 	<dependencies>
 		<dependency>
 			<groupId>net.coobird</groupId>
@@ -73,10 +61,12 @@
 		<dependency>
 			<groupId>com.google.cloud</groupId>
 			<artifactId>google-cloud-storage</artifactId>
+			<version>2.47.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.google.cloud</groupId>
 			<artifactId>google-cloud-storage-control</artifactId>
+			<version>2.47.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -145,6 +135,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.tranquility.ebookreader.EbookReaderApplication</mainClass>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
