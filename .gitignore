@@ -4,6 +4,7 @@ books/
 
 target/
 .mvn/
+src/test
 
 ### IntelliJ IDEA ###
 .idea
