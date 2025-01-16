@@ -1,18 +1,15 @@
 package com.tranquility.ebookreader.service;
 
 import com.tranquility.ebookreader.dto.UpdateReadHistoryRequest;
-import com.tranquility.ebookreader.model.BookInfo;
 import com.tranquility.ebookreader.model.ReadHistory;
 import com.tranquility.ebookreader.repository.BookRepository;
 import com.tranquility.ebookreader.repository.ReadHistoryRepository;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 public class ReadHistoryService {
@@ -25,7 +22,7 @@ public class ReadHistoryService {
     }
 
     public void updateReadHistory(String bookId, String userId, UpdateReadHistoryRequest updateReadHistoryRequest) {
-        Optional<ReadHistory> optional = readHistoryRepository.findById(bookId);
+        Optional<ReadHistory> optional = readHistoryRepository.findByBookIdAndUserId(bookId, userId);
         ReadHistory readHistory = null;
         if (optional.isEmpty()) {
             readHistory = new ReadHistory(bookId, userId, updateReadHistoryRequest.getPageIdx(), updateReadHistoryRequest.getTime());
