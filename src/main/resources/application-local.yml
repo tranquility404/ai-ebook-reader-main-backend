@@ -1,0 +1,12 @@
+spring:
+  data:
+    mongodb:
+      uri: ${MONGODB_URI}
+      database: development
+
+cors:
+  allowed-origins: http://localhost:3000,http://localhost:5173,http://localhost:5174
+
+gcloud:
+  bucket:
+    name: ${GCLOUD_BUCKET_NAME}

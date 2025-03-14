@@ -1,0 +1,12 @@
+spring:
+  data:
+    mongodb:
+      uri: ${MONGODB_URI}
+      database: development
+
+cors:
+  allowed-origins: ${CORS_ALLOWED_ORIGINS}
+
+gcloud:
+  bucket:
+    name: ${GCLOUD_BUCKET_NAME}
