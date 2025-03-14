@@ -23,4 +23,5 @@ cors:
 
 ml:
   service:
+    host: ${ML_SERVICE_HOST}
     port: ${ML_SERVICE_PORT}

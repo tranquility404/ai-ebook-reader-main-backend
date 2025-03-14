@@ -2,7 +2,6 @@ package com.tranquility.ebookreader.service;
 
 import com.tranquility.ebookreader.utils.AuthUtils;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -11,22 +10,21 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import java.net.URI;
 import java.util.List;
 
 @Service
 public class MLService {
 
+    @Value("${ml.service.host}")
+    private String mlServiceUri;
+
     @Value("${ml.service.port}")
     private String port;
-
-    private final String mlServiceUri;
 
     private RestTemplate restTemplate;
 
     public MLService() {
         this.restTemplate = new RestTemplate();
-        mlServiceUri = "localhost";
     }
 
 //    public String healthCheck() {
