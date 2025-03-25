@@ -1,4 +1,5 @@
 # 📖 AI-Ebook-Reader
+
 🔗 **Live Demo**: [AI-Ebook-Reader](https://ai-ebook-reader.vercel.app/)
 
 AI-Ebook-Reader is an upgraded version of my previous project, [**Online Library**](https://github.com/tranquility404/online-library). This new version removes previous limitations and introduces **AI-powered features** to enhance the reading experience.
@@ -18,12 +19,7 @@ With **AI-Ebook-Reader**, users can now:
 - 🎴 **Flashcards** – Generate flashcards for better retention.
 
 ## 🎥 Demo Video
-Watch AI-Ebook-Reader in action! 📚✨
-
-<video controls width="100%">
-  <source src="demo/ai-ebook-reader-demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[![Watch AI-Ebook-Reader in action! 📚✨]](https://github.com/user-attachments/assets/588c91c8-d3cc-48bf-acd2-b975e74d1973)
 
 ## 🛠️ Tech Stack
 ### **Frontend**
@@ -66,9 +62,9 @@ This project follows a **microservices architecture**, designed for **scalabilit
 
 🔹 **ML_SERVICE** (AI Features)
 - Handles all AI-powered tasks:
-    - **Quiz Generation**
-    - **Summary Generation**
-    - **Flashcard Creation**
+  - **Quiz Generation**
+  - **Summary Generation**
+  - **Flashcard Creation**
 
 **Authorization is handled at the service level** rather than centrally, allowing independent scaling of each microservice.
 
