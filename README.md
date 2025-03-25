@@ -84,13 +84,7 @@ This project is open to improvements and new ideas! If you're passionate about *
 - 📊 **Reading Dashboard**
 - 🤖 **ML-based Book Recommendations**
 - ...and many more based on community feedback!
-
-## 📈 Skills I Improved
-✅ **Backend Development** (Spring Boot, FastAPI, microservices)  
-✅ **OOP & System Design** (Scalable & modular architecture)  
-✅ **Cloud Storage & Security** (Google Cloud Storage, JWT, Bcrypt)  
-✅ **AI Integration** (NLP-based summary & quiz generation)
-
+  
 ---
 
 ## 🤓 AI-Ebook-Reader Explained for Non-Techies
