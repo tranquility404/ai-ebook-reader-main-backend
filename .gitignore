@@ -1,0 +1,19 @@
+ai-ebook-reader-gcloud.json
+secrets/
+books/
+.env
+.env.prod
+start.bat
+
+target/*
+.mvn/
+src/test
+
+### IntelliJ IDEA ###
+.idea
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
