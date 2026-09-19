@@ -19,7 +19,7 @@ public class AIService {
 
     public AIService(
             @Value("${groq.api.key}") String apiKey,
-            @Value("${groq.model.name:llama-3.3-70b-versatile}") String modelName,
+            @Value("${groq.model.name}") String modelName,
             @Value("${groq.max.tokens:3072}") int maxTokens
     ) {
         this.apiKey = apiKey;
@@ -36,7 +36,7 @@ public class AIService {
                 int summaryLen = Math.max(1, Math.round(text.split("\\s+").length * 0.3f));
                 String summary = sendRequest("you are an excellent summarizer. Summarize this text in " + summaryLen + " words (NO PREAMBLE):", text);
                 
-                if (combinedSummary.length() > 0) {
+                if (!combinedSummary.isEmpty()) {
                     combinedSummary.append(" ");
                 }
                 combinedSummary.append(summary);

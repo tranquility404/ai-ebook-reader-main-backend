@@ -21,11 +21,14 @@ public class TestComponent {
     @Value("${spring.servlet.multipart.max-request-size}")
     private String maxRequestSize;
 
+    @Value("${groq.model.name}") String modelName;
+
     @PostConstruct
     public void demo() throws IOException {
         System.out.println(Arrays.asList(origins.split(",")));
         System.out.println(maxFileSize);
         System.out.println(maxRequestSize);
+        System.out.println(modelName);
         try {
             // Get the local host InetAddress object
             InetAddress inetAddress = InetAddress.getLocalHost();

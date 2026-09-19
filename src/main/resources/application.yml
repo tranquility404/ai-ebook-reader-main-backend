@@ -25,7 +25,7 @@ groq:
   api:
     key: ${GROQ_API_KEY}
   model:
-    name: ${GROQ_MODEL_NAME:llama-3.3-70b-versatile}
+    name: ${GROQ_MODEL_NAME}
   max:
     tokens: ${GROQ_MAX_TOKENS:3072}
 
